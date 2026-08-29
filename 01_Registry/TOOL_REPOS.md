@@ -16,4 +16,4 @@ firmware sources; product firmware belongs in `FIRMWARE_REPOS.md`.
 | Name | Role | Local path | GitHub repo |
 |---|---|---|---|
 | ai-collaboration-vault | General AI collaboration vault; holds the canonical firmware ecosystem rule | `D:\Home Work\Software Github\ai-collaboration-vault` | https://github.com/TaufikAS0/ai-collaboration-vault |
-| obsidian-portal-hardware | This vault — hardware portal registry | `D:\Home Work\Software Github\obsidian-portal-hardware` | https://github.com/TaufikAS0/obsidian-portal-hardware (planned) |
+| obsidian-portal-hardware | This vault — hardware portal registry | `D:\Home Work\Software Github\obsidian-portal-hardware` | https://github.com/TaufikAS0/obsidian-portal-hardware |
