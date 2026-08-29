@@ -1,0 +1,12 @@
+# Obsidian workspace noise
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/plugins/*/data.json
+
+# OS noise
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Local-only scratch (never register secrets here)
+scratch/
