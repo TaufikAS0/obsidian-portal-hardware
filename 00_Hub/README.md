@@ -11,6 +11,7 @@ Read in this order:
 5. `01_Registry/TOOL_REPOS.md` — supporting tools around the portal
 6. `01_Registry/DEVICES.md` — machines and runtime locations (data dir, LAN URLs)
 7. `02_Rules/README.md` — how to maintain this vault
+8. `NEXT_AI_PROMPT.md` — ready-to-copy prompt for the next AI (GitHub cleanup task)
 
 ## Current vault status
 
