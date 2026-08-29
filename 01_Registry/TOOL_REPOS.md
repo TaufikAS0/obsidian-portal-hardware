@@ -5,7 +5,7 @@ firmware sources; product firmware belongs in `FIRMWARE_REPOS.md`.
 
 | Name | Role | Local path | GitHub repo | Status |
 |---|---|---|---|---|
-| ESP IP Scanner | Scans LAN for ESP devices with Wi-Fi firmware; served by the portal at `http://192.168.1.121:8877/` | `D:\Home Work\Software Github\2026-esp_ip_scanner` | none (local only) | confirmed |
+| ESP IP Scanner | Scans LAN for ESP devices with Wi-Fi firmware; served by the portal at `http://192.168.1.121:8877/` | `D:\Home Work\Software Github\2026-esp_ip_scanner` | https://github.com/TaufikAS0/esp_ip_scanner (private) | confirmed |
 | Solar Power Monitor Backend | Backend server for ESP32 solar power monitoring; possible TPM relation — UNCONFIRMED | `D:\Home Work\Software Github\2026-esp32-solar-power-monitor-backend-server` | https://github.com/TaufikAS0/2026-esp32-solar-power-monitor-backend-server | unconfirmed |
 | ICP STM32 Web Control | Web control tooling for the ICP product (STM32) | `D:\Home Work\Software Github\ICP-STM32-Web-Control` | https://github.com/TaufikAS0/ICP-STM32-Web-Control | confirmed |
 | ICP Webconfiguration | Web configuration tooling for the ICP product | `D:\Home Work\Software Github\ICP-Webconfiguration` | https://github.com/adrifad/ICP-Webconfiguration | confirmed |

@@ -16,8 +16,8 @@ Rules for maintaining this table: see `../02_Rules/registry-rules.md`.
 | Code | Product | Local path | GitHub repo | Latest known release | Status |
 |---|---|---|---|---|---|
 | TMM | Telemetric Module Master | `D:\Home Work\Software Github\2026-telemetric-module-master` | https://github.com/TaufikAS0/2026-telemetric-module-master | v0.5.0 (manifests 0.1.0–0.5.0) | confirmed |
-| TVG | Telemetric Vision Grid | UNCONFIRMED | UNCONFIRMED | v1.4.3 (manifests 1.4.2, 1.4.3; pilot flash done on ESP32-S3) | unconfirmed |
-| TPM | Telemetric Power Monitor | UNCONFIRMED (portal README references its INA3221 source repo) | UNCONFIRMED | v0.16.24 | unconfirmed |
+| TVG | Telemetric Vision Grid | UNCONFIRMED | UNCONFIRMED (no firmware source repo found on GitHub; only `pcb-vision-grid` and `3d-telemetric-vision-grid` exist) | v1.4.3 (manifests 1.4.2, 1.4.3; pilot flash done on ESP32-S3) | unconfirmed |
+| TPM | Telemetric Power Monitor | UNCONFIRMED (portal README references its INA3221 source repo) | UNCONFIRMED (candidate: https://github.com/TaufikAS0/2026-esp32s3-solar-power-monitor-ina3221 — repo exists and matches INA3221 hardware, but no manifest/product-code verification found) | v0.16.24 | unconfirmed |
 
 ## How to promote an `unconfirmed` row to `confirmed`
 
