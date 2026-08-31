@@ -8,7 +8,10 @@ Hardware Portal ecosystem repository MUST follow this protocol.
 1. Read `00_Hub/README.md` for the ecosystem map.
 2. Read `01_Registry/CENTRAL_REPOS.md` and `01_Registry/FIRMWARE_REPOS.md`
    to learn where everything lives and which GitHub repo it belongs to.
-3. If your task involves a specific product, read that product's note in
+3. Read `02_Rules/firmware-package-rules.md` (mandatory). One firmware
+   version = one package = one merged/full BIN (USB) + one app-only BIN
+   (OTA/LAN) + one manifest, all bound by one `releaseId`.
+4. If your task involves a specific product, read that product's note in
    `03_Products/<CODE>.md`. If it does not exist yet, create it from
    `03_Products/_TEMPLATE.md`.
 
