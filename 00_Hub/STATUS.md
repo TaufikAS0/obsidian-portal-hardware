@@ -1,6 +1,6 @@
 # Vault Status
 
-Updated: 2026-08-30
+Updated: 2026-08-31
 
 | Item | State |
 |---|---|
@@ -18,6 +18,22 @@ Updated: 2026-08-30
 4. Register product firmware repos here as they are created for the remaining catalog codes.
 
 ## Maintenance log
+
+### 2026-08-31 — Device bootstrap standard
+
+- Created the shared `2026-telemetric-device-bootstrap` framework repository.
+- Standardized stored Wi-Fi → factory Wi-Fi → unique fallback AP provisioning.
+- Reserved `TELEMETRIC-SETUP-XXXXXX` and `Telemetric Device Setup` as the
+  general operator identity.
+- Kept BIN builds hardware-profile-specific and retained USB recovery beside
+  authenticated A/B OTA.
+- Registered the repository in `01_Registry/TOOL_REPOS.md`.
+- Verified (2026-08-31): GitHub repo created PUBLIC at
+  https://github.com/TaufikAS0/2026-telemetric-device-bootstrap (API
+  `repos/TaufikAS0/2026-telemetric-device-bootstrap` returned owner, public
+  visibility, default branch `main`); foundation pushed and local HEAD =
+  origin/main = ls-remote = `f9fc81c`; 16/16 tests pass in the repo. The
+  `confirmed` status in `TOOL_REPOS.md` is therefore backed by evidence.
 
 ### 2026-08-30 — GitHub tidying session (laptop-utama, per NEXT_AI_PROMPT)
 

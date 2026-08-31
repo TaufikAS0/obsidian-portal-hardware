@@ -10,6 +10,7 @@ firmware sources; product firmware belongs in `FIRMWARE_REPOS.md`.
 | ICP STM32 Web Control | Web control tooling for the ICP product (STM32) | `D:\Home Work\Software Github\ICP-STM32-Web-Control` | https://github.com/TaufikAS0/ICP-STM32-Web-Control | confirmed |
 | ICP Webconfiguration | Web configuration tooling for the ICP product | `D:\Home Work\Software Github\ICP-Webconfiguration` | https://github.com/adrifad/ICP-Webconfiguration | confirmed |
 | Bardi CCTV Web | CCTV web project; unrelated to the portal ecosystem, listed for completeness | `D:\Home Work\Software Github\2026-06-Bardi-CCTV-Web` | https://github.com/TaufikAS0/2026-06-Bardi-CCTV-Web | confirmed |
+| Telemetric Device Bootstrap | Shared provisioning, fallback AP, LAN discovery, OTA, and recovery framework; builds remain hardware-profile-specific | `D:\Home Work\Software Github\2026-telemetric-device-bootstrap` | https://github.com/TaufikAS0/2026-telemetric-device-bootstrap | confirmed |
 
 ## Coordination vault
 
