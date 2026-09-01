@@ -1,6 +1,6 @@
 # Vault Status
 
-Updated: 2026-08-31
+Updated: 2026-09-01
 
 | Item | State |
 |---|---|
@@ -8,7 +8,7 @@ Updated: 2026-08-31
 | Central repos registered | 2 of 2 (portal + library) |
 | Product firmware repos registered | 1 confirmed (TMM), 2 UNCONFIRMED (TVG, TPM) |
 | Products in catalog | 37 codes |
-| Library manifests published | TMM 0.1.0–0.5.0, TPM 0.16.24, TVG 1.4.2, 1.4.3 |
+| Library manifests published | TMM 0.1.0–0.5.0, 0.6.0, 0.6.1, 0.1.0-bootstrap.1 (dual-artifact), TPM 0.16.24, TVG 1.4.2, 1.4.3 |
 
 ## Open registry gaps (any AI may pick these up)
 
@@ -18,6 +18,23 @@ Updated: 2026-08-31
 4. Register product firmware repos here as they are created for the remaining catalog codes.
 
 ## Maintenance log
+
+### 2026-09-01 — Bootstrap handbook for new products
+
+- Added `04_Handbook/` with four reusable documents:
+  `bootstrap-tmm-history.md` (riwayat terverifikasi implementasi TMM),
+  `bootstrap-new-product-guide.md` (panduan A–H untuk produk baru),
+  `bootstrap-new-product-template.md` (checklist siap salin),
+  `bootstrap-new-product-ai-prompt.md` (prompt siap salin untuk AI firmware).
+- Linked the handbook from this hub README and made the guide mandatory
+  reading in `AGENTS.md` for AI building bootstrap firmware for new products.
+- Facts in the handbook were verified directly against repository commits
+  (`f9fc81c`, `ca04068`, `9648a0c` in the bootstrap repo; `db11683`, `ed63cba`,
+  `2b39e24` in the library; `c2ac55f`, `770ffc5` in the portal), the TMM
+  release manifest `TMM-0.1.0-bootstrap.1-9648a0c`, and the portal database
+  (two records imported 2026-09-01T01:54Z).
+- Physical flashing of the bootstrap package has NOT been performed; the
+  handbook states this explicitly.
 
 ### 2026-08-31 — Device bootstrap standard
 

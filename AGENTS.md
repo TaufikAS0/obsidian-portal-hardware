@@ -13,7 +13,12 @@ Hardware Portal ecosystem repository MUST follow this protocol.
    (OTA/LAN) + one manifest, all bound by one `releaseId`.
 4. Read `02_Rules/device-bootstrap-standard.md` for provisioning, fallback AP,
    LAN discovery, OTA, or recovery work.
-5. If your task involves a specific product, read that product's note in
+5. If your task involves building bootstrap firmware for a **new product**,
+   read `04_Handbook/bootstrap-new-product-guide.md` first, then use
+   `04_Handbook/bootstrap-new-product-template.md` as the closing checklist
+   and `04_Handbook/bootstrap-new-product-ai-prompt.md` as the work prompt.
+   Background and verified decisions: `04_Handbook/bootstrap-tmm-history.md`.
+6. If your task involves a specific product, read that product's note in
    `03_Products/<CODE>.md`. If it does not exist yet, create it from
    `03_Products/_TEMPLATE.md`.
 
