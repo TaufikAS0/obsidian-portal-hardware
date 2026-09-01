@@ -5,26 +5,27 @@ Hardware Portal ecosystem repository MUST follow this protocol.
 
 ## Before doing any work
 
-1. Read `00_Hub/README.md` for the ecosystem map.
-2. Read `01_Registry/CENTRAL_REPOS.md` and `01_Registry/FIRMWARE_REPOS.md`
+1. Read the root `README.md` first. Do not run commands or edit files before
+   understanding its task-routing table.
+2. Read `02_Rules/ai-entry-protocol.md`, then follow the route matching the
+   requested work.
+3. Read `00_Hub/README.md` for the ecosystem map.
+4. Read `01_Registry/CENTRAL_REPOS.md` and `01_Registry/FIRMWARE_REPOS.md`
    to learn where everything lives and which GitHub repo it belongs to.
-3. Read `02_Rules/firmware-package-rules.md` (mandatory). One firmware
-   version = one package = one merged/full BIN (USB) + one app-only BIN
-   (OTA/LAN) + one manifest, all bound by one `releaseId`.
-3. Read `02_Rules/firmware-package-rules.md` (mandatory). One firmware
+5. Read `02_Rules/firmware-package-rules.md` for firmware work. One firmware
    version = one package = one merged/full BIN (USB) + one app-only BIN
    (OTA/LAN), described by two manifest files (`manifest-full.json` and
    `manifest-app-only.json`), all bound by one `releaseId`.
-4. Read `02_Rules/device-bootstrap-standard.md` for provisioning, fallback AP,
+6. Read `02_Rules/device-bootstrap-standard.md` for provisioning, fallback AP,
    LAN discovery, OTA, or recovery work.
-5. If your task involves building bootstrap firmware for a **new product**,
+7. If your task involves building bootstrap firmware for a **new product**,
    read `04_Guides/New Product Bootstrap Guide.md` first, follow
    `04_Guides/Bootstrap Build and Publish SOP.md` for the exact commands, use
    `04_Guides/New Product Bootstrap Checklist.md` as the closing checklist and
    `04_Guides/AI Prompt - New Product Bootstrap.md` as the work prompt.
    Background and verified decisions: `05_History/TMM Bootstrap Implementation
    History.md` and `05_History/Firmware Package Architecture Decisions.md`.
-6. If your task involves a specific product, read that product's note in
+8. If your task involves a specific product, read that product's note in
    `03_Products/<CODE>.md`. If it does not exist yet, create it from
    `03_Products/_TEMPLATE.md`.
 

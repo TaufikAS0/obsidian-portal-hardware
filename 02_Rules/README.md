@@ -2,10 +2,12 @@
 
 | Rule file | Purpose |
 |---|---|
+| [[02_Rules/ai-entry-protocol|AI Entry Protocol]] | README-first rule and mandatory reading route for every AI |
 | `registry-rules.md` | Exact formats and lifecycle for every registry table |
 | `ai-handoff.md` | How AIs hand off information to each other |
 
-Mandatory entry rules for any AI are in the root `AGENTS.md`.
+Every AI starts from the root `README.md`, then follows root `AGENTS.md` and
+[[02_Rules/ai-entry-protocol|AI Entry Protocol]].
 
 ## What belongs here vs elsewhere
 

@@ -20,6 +20,8 @@ untuk menemukan registry, rules, products, guides, dan history.
 
 ## Rules — aturan wajib
 
+- [[02_Rules/ai-entry-protocol|AI Entry Protocol]] — README wajib dibaca
+  pertama dan routing bacaan berdasarkan jenis pekerjaan
 - [[02_Rules/registry-rules|Registry Rules]] — cara merawat registry
 - [[02_Rules/device-bootstrap-standard|Device Bootstrap Standard]] —
   provisioning, fallback AP, OTA, recovery

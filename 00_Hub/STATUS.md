@@ -19,6 +19,15 @@ Updated: 2026-09-01
 
 ## Maintenance log
 
+### 2026-09-01 — AI README-first entry protocol
+
+- Root `README.md` dijadikan pintu masuk wajib dengan routing bacaan sesuai
+  jenis pekerjaan.
+- Menambahkan `02_Rules/ai-entry-protocol.md` sebagai aturan kanonik sebelum AI
+  menjalankan command atau mengubah file.
+- Menghapus langkah firmware package lama yang duplikat di `AGENTS.md` dan
+  mempertahankan kontrak dua BIN + dua manifest + satu `releaseId`.
+
 ### 2026-09-01 — Vault restrukturisasi: Guides, History, Map of Content
 
 - Membuat `04_Guides/` (New Product Bootstrap Guide, Bootstrap Build and

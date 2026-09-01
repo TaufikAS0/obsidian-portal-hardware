@@ -1,41 +1,69 @@
 # Obsidian Portal Hardware Vault
 
-Dedicated Obsidian coordination vault for the **Telemetric Hardware Portal ecosystem**.
+> [!IMPORTANT] AI: READ THIS FILE FIRST
+> Sebelum menjalankan command, mengubah file, membuat firmware, atau melakukan
+> publish, baca `README.md` ini sampai selesai lalu ikuti urutan baca di bawah.
 
-This vault is the single place where every AI and human records and looks up:
+Vault ini adalah pusat navigasi dan koordinasi untuk ekosistem **Telemetric
+Hardware Portal**. Di sini manusia dan AI mencari lokasi repository, aturan
+firmware, catatan produk, panduan kerja, serta sejarah keputusan teknis.
 
-- **where** every repository lives on disk (local path),
-- **which GitHub repository** it belongs to,
-- **which firmware repository** belongs to which product code.
+GitHub: https://github.com/TaufikAS0/obsidian-portal-hardware
 
-There is exactly **one** web portal, exactly **one** firmware library, and
-**many** product firmware repositories that will keep growing. This vault keeps
-that growth tidy and searchable.
+## Urutan baca wajib untuk AI
 
-Planned GitHub repository: `TaufikAS0/obsidian-portal-hardware` (private).
+1. **File ini** — pahami fungsi vault dan tentukan jenis pekerjaan.
+2. [[02_Rules/ai-entry-protocol|AI Entry Protocol]] — pilih jalur baca yang
+   sesuai dengan pekerjaan.
+3. `AGENTS.md` — aturan kerja, keselamatan, registry, dan laporan akhir.
+4. [[00_Hub/README|Hub / Map of Content]] — peta seluruh catatan.
+5. Baca rules, product note, guide, dan history yang diwajibkan oleh jalur
+   pekerjaan. Jangan mulai bekerja hanya dengan membaca README.
 
-## Start here
+Jika fakta penting tidak tersedia, tulis `UNCONFIRMED`. Jangan menebak hardware,
+repository, versi, checksum, lifecycle, atau hasil pengujian.
 
-1. `AGENTS.md` — mandatory rules for any AI opening this vault
-2. `00_Hub/README.md` — ecosystem overview and entry map
-3. `01_Registry/FIRMWARE_REPOS.md` — the firmware repository registry (most important file)
-4. `01_Registry/CENTRAL_REPOS.md` — the one portal and the one library
+## Pilih jalur pekerjaan
 
-## Folder layout
-
-| Folder | Purpose |
+| Pekerjaan | Bacaan wajib setelah README dan AGENTS |
 |---|---|
-| `00_Hub/` | Entry point, ecosystem overview, vault status |
-| `01_Registry/` | Machine-readable-by-humans registry of paths, repos, products, devices |
-| `02_Rules/` | How the registry must be maintained and how AIs hand work to each other |
-| `03_Products/` | One note per product that has firmware, using the template |
-| `99_Archive/` | Retired registry rows and old notes (never hard-delete) |
+| Mencari atau mendaftarkan repository | [[02_Rules/registry-rules|Registry Rules]], [[01_Registry/CENTRAL_REPOS|Central Repositories]], [[01_Registry/FIRMWARE_REPOS|Firmware Repositories]] |
+| Mengerjakan firmware produk | Catatan di `03_Products/<CODE>.md`, [[02_Rules/firmware-package-rules|Firmware Package Rules]] |
+| Membuat bootstrap produk baru | [[02_Rules/device-bootstrap-standard|Device Bootstrap Standard]], [[04_Guides/New Product Bootstrap Guide|New Product Bootstrap Guide]], [[04_Guides/New Product Bootstrap Checklist|Checklist]] |
+| Build dan publish dua BIN | [[04_Guides/Bootstrap Build and Publish SOP|Build and Publish SOP]], [[02_Rules/firmware-package-rules|Firmware Package Rules]] |
+| Mengubah portal, flashing, atau QC | [[01_Registry/CENTRAL_REPOS|Central Repositories]], lalu `AGENTS.md` di repository portal |
+| Memahami alasan arsitektur | [[05_History/Firmware Package Architecture Decisions|Architecture Decisions]] dan [[05_History/TMM Bootstrap Implementation History|TMM Bootstrap History]] |
+| Menyerahkan pekerjaan ke AI lain | [[02_Rules/ai-handoff|AI Handoff]] |
 
-## Relationship to other documentation
+## Bentuk ekosistem
 
-- Canonical cross-repo governance: `ai-collaboration-vault` → `03_Rules/telemetric-firmware-ecosystem.md` (status: adopted 2026-08-26)
-- Portal-side contract: `telemetric-hardware-portal/docs/TELEMETRIC_ECOSYSTEM.md`
-- Library-side contract: `telemetric-firmware-library/docs/ECOSYSTEM_ARCHITECTURE.md`
+- Satu portal lokal: `telemetric-hardware-portal`.
+- Satu firmware library: `telemetric-firmware-library`.
+- Banyak repository firmware produk yang masing-masing memiliki versi sendiri.
+- BIN berada di GitHub Release, bukan Git history.
+- Satu firmware package modern berisi dua BIN dan dua manifest yang diikat satu
+  `releaseId`.
+- Portal menentukan lifecycle, izin flashing, audit, dan QC.
 
-This vault does not duplicate those rules. It **registers concrete locations**
-and links to the canonical documents.
+## Struktur vault
+
+| Folder | Isi |
+|---|---|
+| `00_Hub/` | Map of Content dan status ekosistem |
+| `01_Registry/` | Lokasi, GitHub, produk, perangkat, dan repository |
+| `02_Rules/` | Aturan wajib untuk manusia dan AI |
+| `03_Products/` | Satu catatan per produk |
+| `04_Guides/` | Tutorial, SOP, checklist, dan prompt siap pakai |
+| `05_History/` | Sejarah implementasi dan keputusan arsitektur |
+| `99_Archive/` | Catatan pensiun; jangan hard-delete |
+
+## Prinsip singkat
+
+- Baca sebelum mengubah.
+- Verifikasi sebelum mengklaim.
+- Gunakan `UNCONFIRMED` daripada menebak.
+- Preserve data historis dan perubahan milik pengguna.
+- Build berhasil bukan bukti hardware berhasil.
+- Publish bukan approval untuk flash.
+
+Mulai navigasi dari [[00_Hub/README|Hardware Portal Hub]].
