@@ -1,7 +1,8 @@
-# Quick Prompt — AI Firmware Bootstrap Produk Baru
+# AI Prompt - New Product Bootstrap
 
-Salin teks di bawah garis ini ke AI yang akan membangun firmware bootstrap
-untuk produk baru. Ganti bagian `[...]`.
+> Prompt siap salin untuk AI yang membangun package bootstrap produk baru.
+> Untuk manusia: isi bagian `[...]` sebelum menyalin. Checklist penutup:
+> [[New Product Bootstrap Checklist]]. Panduan: [[New Product Bootstrap Guide]].
 
 ---
 
@@ -14,7 +15,7 @@ dengan framework Telemetric Device Bootstrap.
    `docs/BOOTSTRAP_STANDARD.md`.
 2. Di vault Obsidian: `02_Rules/device-bootstrap-standard.md`,
    `02_Rules/firmware-package-rules.md`, dan panduan
-   `04_Handbook/bootstrap-new-product-guide.md`.
+   `04_Guides/New Product Bootstrap Guide.md`.
 3. Contoh implementasi yang sudah jadi: adapter dan package TMM di repo
    bootstrap (`products/tmm/`, `src/adapters/esp32/`).
 
@@ -46,7 +47,7 @@ dengan framework Telemetric Device Bootstrap.
    portal mengimpor **tepat dua record** yang tampil sebagai **satu package
    kartu** di container yang sesuai `firmwareRole` (USB memilih merged BIN,
    OTA memilih app-only BIN).
-7. Tutup dengan checklist `04_Handbook/bootstrap-new-product-template.md`.
+7. Tutup dengan checklist `04_Guides/New Product Bootstrap Checklist.md`.
 
 Laporkan compact: PRODUCT VERSION | releaseId | lifecycle/evidence | dua SHA |
 release URL | hal yang belum terbukti di hardware.

@@ -1,7 +1,7 @@
-# Template — Checklist Produk Bootstrap Baru
+# New Product Bootstrap Checklist
 
-Salin bagian ini ke catatan produk, isi semua kotak, dan jangan menandai kotak
-tanpa bukti. Panduan lengkap: `04_Handbook/bootstrap-new-product-guide.md`.
+> Checklist siap salin untuk package bootstrap produk baru. Panduan:
+> [[New Product Bootstrap Guide]]. Urutan perintah: [[Bootstrap Build and Publish SOP]]. Kotak hanya dicentang setelah buktinya ada.
 
 ## Header
 
@@ -14,30 +14,28 @@ tanpa bukti. Panduan lengkap: `04_Handbook/bootstrap-new-product-guide.md`.
 - OTA BIN/SHA: `<app.bin> / <sha256>`
 - Release URL: `<url GitHub release/draft>`
 - Library commit: `<hash commit manifest di library>`
-- Portal verification: `<tanggal + ringkasan: dua record, satu kartu, mapping USB/OTA>`
+- Portal verification: `<tanggal + ringkasan>`
 - Physical-test status: `<belum / tanggal + ringkasan>`
-- Unknowns: `<daftar field UNCONFIRMED + risiko>`
+- Unknowns: `<field UNCONFIRMED + fitur yang dinonaktifkan>`
 
-## Checklist
-
-### Perencanaan
+## Perencanaan
 
 - [ ] Product identity ditentukan
 - [ ] Hardware profile confirmed
 
-### Implementasi
+## Implementasi
 
 - [ ] Adapter hardware dibuat
 - [ ] Factory LAB policy diperiksa
 
-### Pengujian perangkat
+## Pengujian perangkat
 
 - [ ] NVS tested
 - [ ] AP fallback tested
 - [ ] Provisioning tested
 - [ ] OTA pending/confirm/rollback tested
 
-### Build & release
+## Build & release
 
 - [ ] Source committed
 - [ ] Clean-worktree gate passed
@@ -46,28 +44,36 @@ tanpa bukti. Panduan lengkap: `04_Handbook/bootstrap-new-product-guide.md`.
 - [ ] Checksums verified
 - [ ] Dual manifests valid
 
-### Distribusi
+## Distribusi
 
 - [ ] GitHub Release published
 - [ ] Library manifests pushed
 
-### Verifikasi portal
+## Verifikasi portal
 
 - [ ] Portal imported two records
 - [ ] Portal displays one package
 - [ ] USB mapping verified
 - [ ] OTA mapping verified
 
-### Penutup
+## Penutup
 
 - [ ] Physical test result recorded
 - [ ] Production readiness separately approved
 
 ## Aturan pengisian
 
-- Kotak hanya boleh dicentang setelah buktinya ada (commit, log, screenshot,
-  atau catatan fisik).
-- `Production readiness separately approved` harus diputuskan manusia —
-  status `draft`/`built` tidak boleh langsung dipakai produksi.
-- Jika ada field `UNCONFIRMED`, tulis di `Unknowns` beserta fitur yang
+- Setiap centang harus punya bukti (commit, log, hasil unduh, catatan fisik).
+- `Production readiness separately approved` diputuskan manusia; status
+  `draft`/`built` tidak boleh dipakai produksi.
+- Field `UNCONFIRMED` wajib ditulis di `Unknowns` beserta fitur yang
   dinonaktifkan karenanya.
+
+## Terkait
+
+- [[New Product Bootstrap Guide]] — penjelasan tiap langkah
+- [[Bootstrap Build and Publish SOP]] — perintah persis
+- [[AI Prompt - New Product Bootstrap]] — versi prompt untuk AI
+- [[TMM Bootstrap Implementation History]] — contoh nyata TMM
+- [[02_Rules/firmware-package-rules|Firmware Package Rules]] ·
+  [[02_Rules/device-bootstrap-standard|Device Bootstrap Standard]]

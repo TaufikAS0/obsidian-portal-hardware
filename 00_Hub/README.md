@@ -1,23 +1,57 @@
-# 00 Hub — Entry Point
+# 00 Hub — Map of Content
 
-You are in the coordination vault for the Telemetric Hardware Portal ecosystem.
+Vault koordinasi ekosistem Telemetric Hardware Portal. Mulai dari peta ini
+untuk menemukan registry, rules, products, guides, dan history.
 
-Read in this order:
+## Ekosistem
 
-1. `ECOSYSTEM.md` — the big picture: 1 portal + 1 library + N product firmware repos
-2. `01_Registry/CENTRAL_REPOS.md` — the two central repositories (paths + GitHub)
-3. `01_Registry/FIRMWARE_REPOS.md` — every product firmware repository (the growing list)
-4. `01_Registry/PRODUCTS.md` — all 37 product codes and whether firmware exists
-5. `01_Registry/TOOL_REPOS.md` — supporting tools around the portal
-6. `01_Registry/DEVICES.md` — machines and runtime locations (data dir, LAN URLs)
-7. `02_Rules/README.md` — how to maintain this vault
-8. `NEXT_AI_PROMPT.md` — ready-to-copy prompt for the next AI (GitHub cleanup task)
-9. `04_Handbook/` — reusable bootstrap handbook:
-   `04_Handbook/bootstrap-tmm-history.md` (riwayat implementasi TMM),
-   `04_Handbook/bootstrap-new-product-guide.md` (panduan produk baru),
-   `04_Handbook/bootstrap-new-product-template.md` (checklist),
-   `04_Handbook/bootstrap-new-product-ai-prompt.md` (prompt AI)
+- [[00_Hub/ECOSYSTEM|ECOSYSTEM]] — gambaran besar: 1 portal + 1 library +
+  N product firmware repos
+- [[00_Hub/STATUS|STATUS]] — status vault dan maintenance log
+
+## Registry — lokasi dan nama GitHub
+
+- [[01_Registry/CENTRAL_REPOS|CENTRAL_REPOS]] — portal + library
+- [[01_Registry/FIRMWARE_REPOS|FIRMWARE_REPOS]] — repo firmware per produk
+- [[01_Registry/TOOL_REPOS|TOOL_REPOS]] — tools pendukung (termasuk device
+  bootstrap framework)
+- [[01_Registry/PRODUCTS|PRODUCTS]] — 37 kode produk
+- [[01_Registry/DEVICES|DEVICES]] — mesin dan lokasi runtime
+
+## Rules — aturan wajib
+
+- [[02_Rules/registry-rules|Registry Rules]] — cara merawat registry
+- [[02_Rules/device-bootstrap-standard|Device Bootstrap Standard]] —
+  provisioning, fallback AP, OTA, recovery
+- [[02_Rules/firmware-package-rules|Firmware Package Rules]] — satu versi =
+  satu package: dua BIN + dua manifest, satu releaseId
+- [[02_Rules/ai-handoff|AI Handoff]] — serah terima antar AI
+
+## Products
+
+- [[TMM|TMM — Telemetric Module Master]]
+- [[TPM|TPM — Telemetric Power Monitor]]
+- [[TVG|TVG — Telemetric Vision Grid]]
+- [[03_Products/_TEMPLATE|Template note produk]]
+
+## Guides — membuat bootstrap produk baru
+
+1. [[04_Guides/New Product Bootstrap Guide|New Product Bootstrap Guide]] —
+   panduan A–H (identitas → profile → adapter → build → publish → portal)
+2. [[04_Guides/Bootstrap Build and Publish SOP|Build and Publish SOP]] — urutan perintah persis + penanganan kegagalan
+3. [[04_Guides/New Product Bootstrap Checklist|Checklist]] — checklist siap salin
+4. [[04_Guides/AI Prompt - New Product Bootstrap|AI Prompt]] — prompt siap salin untuk AI firmware
+
+## History — keputusan dan riwayat
+
+- [[05_History/TMM Bootstrap Implementation History|TMM Bootstrap History]] — dari kebutuhan awal sampai tampil di portal
+- [[05_History/Firmware Package Architecture Decisions|Architecture Decisions]] — keputusan arsitektur + bukti commit
+
+## Lainnya
+
+- [[00_Hub/NEXT_AI_PROMPT|NEXT_AI_PROMPT]] — prompt tugas berantai
+- `99_Archive/` — baris registry yang pensiun (jangan hard-delete)
 
 ## Current vault status
 
-See `STATUS.md`.
+Lihat [[00_Hub/STATUS|STATUS]].

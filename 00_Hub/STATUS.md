@@ -19,6 +19,22 @@ Updated: 2026-09-01
 
 ## Maintenance log
 
+### 2026-09-01 — Vault restrukturisasi: Guides, History, Map of Content
+
+- Membuat `04_Guides/` (New Product Bootstrap Guide, Bootstrap Build and
+  Publish SOP, New Product Bootstrap Checklist, AI Prompt - New Product
+  Bootstrap) dan `05_History/` (TMM Bootstrap Implementation History,
+  Firmware Package Architecture Decisions).
+- Menghapus `04_Handbook/` (konten dimigrasi ke struktur baru).
+- `00_Hub/README.md` dijadikan Map of Content dengan wikilink ke
+  Registry, Rules, Products, Guides, dan History; seluruh guide saling
+  terhubung; `03_Products/TMM.md` terhubung ke history, rules, dan guide.
+- Memperbarui aturan lama: package memakai dua manifest (`manifest-full.json`
+  + `manifest-app-only.json`), bukan satu `manifest.json`.
+- Scan byte-level seluruh vault: tidak ada mojibake nyata. Karakter em-dash dan
+  arrow lama adalah UTF-8 valid (E2 80 94 / E2 86 94); laporan mojibake
+  sebelumnya adalah artefak tampilan konsol PowerShell 5.1.
+
 ### 2026-09-01 — Bootstrap handbook for new products
 
 - Added `04_Handbook/` with four reusable documents:

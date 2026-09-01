@@ -47,9 +47,10 @@ Setiap version + hardware profile wajib menghasilkan dalam satu build:
 
 - merged/full BIN untuk USB bootstrap/recovery;
 - app-only BIN untuk OTA/LAN;
-- manifest dengan satu `releaseId`, source commit, profile, offset, ukuran, dan
-  SHA-256 kedua BIN.
+- dua manifest library — `manifest-full.json` dan `manifest-app-only.json` —
+  dengan satu `releaseId`, source commit, profile, offset, ukuran, dan
+  SHA-256 masing-masing BIN.
 
 Detail teknis dan template profile berada di repo bootstrap. AI wajib membaca
 aturan repo dan tidak boleh menebak pin, flash geometry, partition, atau status
-kesiapan hardware.
+kesiapan hardware. Panduan lengkap: [[04_Guides/New Product Bootstrap Guide|New Product Bootstrap Guide]].
