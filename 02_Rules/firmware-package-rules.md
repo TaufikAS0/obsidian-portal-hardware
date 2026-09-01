@@ -34,3 +34,36 @@
    version — never two independent firmware releases.
 5. If one of the two BINs is missing, the affected update method is disabled
    in the portal with a short reason; the other method stays usable.
+
+## Bootstrap LAB packages (decisions 2026-08-31)
+
+These decisions apply to LAB packages produced through the shared
+`2026-telemetric-device-bootstrap` framework (`Telemetric Device Setup`):
+
+- The bootstrap repository is a **shared framework/tool**, not one universal
+  BIN. Nothing about it replaces product firmware.
+- Every BIN stays bound to one **productCode** and one **hardware profile**;
+  chip family, flash geometry, and partition layout are never universal.
+- One release still ships the pair: merged/full BIN (USB) + app-only BIN
+  (OTA/LAN), bound by one `releaseId` in the library manifest.
+- The **factory Wi-Fi for LAB** is deliberately committed to Git as a LAB
+  build input and embedded inside the LAB BIN, so a fresh LAB unit connects
+  on first boot and stores the credential in NVS. This is allowed for LAB
+  builds only. The password must never appear in release manifests, logs,
+  operator/AI notes, or production builds; production credentials stay out
+  of Git entirely.
+- LAB builds MUST carry `stage: "lab"` in their manifest. The portal stores
+  this field and shows a clear **LAB** badge on the version, so an operator
+  can never mistake a LAB package for production firmware.
+
+## Import behavior (portal + firmware library)
+
+- The library manifest schema accepts optional `stage` (`lab`/`production`)
+  and `releaseId`; the portal importer stores both and surfaces `stage`.
+- The portal imports each artifact only after its physical BIN is downloaded
+  and verified (byte size + SHA-256). A missing BIN or manifest never creates
+  a firmware record.
+- Both artifacts of one release may coexist in the portal for the same
+  product/version/build (they differ by image type), and the portal groups
+  them into one version card with a single UPDATE button: USB picks the
+  merged/full record, OTA/LAN picks the app-only record.
