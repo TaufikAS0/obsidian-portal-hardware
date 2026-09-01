@@ -56,6 +56,36 @@ These decisions apply to LAB packages produced through the shared
   this field and shows a clear **LAB** badge on the version, so an operator
   can never mistake a LAB package for production firmware.
 
+## Firmware role and workspace containers (decisions 2026-09-01)
+
+Every manifest and portal record carries an optional `firmwareRole`:
+
+| Role | Meaning |
+|---|---|
+| `bootstrap` | First-install / provisioning / recovery base firmware (e.g. the Telemetric Device Bootstrap LAB package) |
+| `application` | The product's main function firmware (default for legacy manifests without the field) |
+| `recovery` | Dedicated recovery image |
+
+Rules:
+
+- Both artifacts of one `releaseId` must carry the same `firmwareRole`.
+- The portal groups packages into three containers in the product workspace:
+  1. **`<PRODUCT> Bootstrap & Recovery`** (amber) — bootstrap and recovery
+     packages, with a warning that bootstrap only fits its matching hardware
+     profile;
+  2. **`<PRODUCT> Application Firmware`** (cyan) — the product's main
+     firmware;
+  3. **Firmware History** (collapsed by default) — retired and quarantined
+     packages.
+- One release stays one package card with one UPDATE button: USB picks the
+  merged/full BIN, OTA/LAN picks the app-only BIN.
+
+**Hardware-profile binding**: the current TMM bootstrap package
+(`TMM-0.1.0-bootstrap.1-9648a0c`) is built for profile `TMM_V6_R0_M0` only.
+A different hardware revision (e.g. V7) needs its own compatible bootstrap
+package built from that profile — never flash a bootstrap BIN onto a
+mismatched revision.
+
 ## Import behavior (portal + firmware library)
 
 - The library manifest schema accepts optional `stage` (`lab`/`production`)
