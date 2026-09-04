@@ -19,6 +19,20 @@ Updated: 2026-09-04 (TGC added)
 
 ## Maintenance log
 
+### 2026-09-04 — TGC Initial package published and verified in portal
+
+- Package `TGC-0.1.0-initial.1-24113fe` (bootstrap, lab) published via
+  `publish-package` to draft release `TGC-v0.1.0-initial.1` (4 assets: 2 BIN +
+  2 manifest); download checksum verified by publisher.
+- Portal auto-synced: exactly 2 records (full + app-only) with
+  `firmwareRole=bootstrap`, `stage=lab`.
+- UI verified: one card in Initial/Setup container (cyan), LAB BOOTSTRAP
+  badge, ESP32-S3 / 16MB / `tgc-ota-16mb` displayed, USB→merged, OTA→app-only.
+- FIRMWARE_REPOS.md: TGC row promoted to `confirmed` (local path and GitHub
+  repo verified).
+- Physical flash/provision/OTA on TGC hardware still pending.
+- COM6: UNCONFIRMED. ESP32 classic: UNCONFIRMED.
+
 ### 2026-09-04 — Produk baru: TGC (Telemetric Ground Checker)
 
 - TGC (Safety Checker & Logging, Main Products) ditambahkan ke katalog portal
