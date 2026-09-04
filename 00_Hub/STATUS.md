@@ -1,14 +1,14 @@
 # Vault Status
 
-Updated: 2026-09-04 (TGC added)
+Updated: 2026-09-04 (TGC added, TMM 0.6.2 QC published)
 
 | Item | State |
 |---|---|
 | Vault created | 2026-08-30 |
 | Central repos registered | 2 of 2 (portal + library) |
-| Product firmware repos registered | 1 confirmed (TMM), 3 UNCONFIRMED (TVG, TPM, TGC) |
-| Products in catalog | 38 codes (TGC ditambahkan 2026-09-04) |
-| Library manifests published | TMM 0.1.0–0.5.0, 0.6.0, 0.6.1, 0.1.0-bootstrap.1 (dual-artifact), TPM 0.16.24, TVG 1.4.2, 1.4.3 |
+| Product firmware repos registered | 2 confirmed (TMM, TGC), 2 UNCONFIRMED (TVG, TPM) |
+| Products in catalog | 38 codes |
+| Library manifests published | TMM 0.1.0–0.5.0, 0.6.0, 0.6.2 (dual-artifact QC), 0.6.1 (portal only), 0.1.0-bootstrap.1 (dual-artifact bootstrap), TGC 0.1.0-initial.1 (dual-artifact bootstrap), TPM 0.16.24, TVG 1.4.2, 1.4.3 |
 
 ## Open registry gaps (any AI may pick these up)
 
@@ -17,6 +17,15 @@ Updated: 2026-09-04 (TGC added)
 3. Confirm whether `2026-esp32-solar-power-monitor-backend-server` is TPM-related tooling or unrelated.
 4. Register product firmware repos here as they are created for the remaining catalog codes.
 
+## Maintenance log
+
+### 2026-09-04 - TMM v0.6.2 Hardware QC published
+
+- Dual-artifact package `TMM-0.6.2-bdc13c0` (firmwareRole=qc, stage=lab) published via publish-package to draft release TMM-v0.6.2 (4 assets, download checksum verified).
+- Portal auto-synced: exactly 2 records (full + app-only). Bootstrap 0.1.0-bootstrap.1 intact in Initial/Setup. Application firmware (0.1.0-0.6.1) hidden per portal policy.
+- TMM firmware repo commit 556e0e1 only untracked BINs (bdc13c0 build unchanged).
+- OTA partition compatibility: tmm-ota-4mb only; different layouts need USB merged flash.
+- Physical flash/QC/OTA on hardware still pending.
 ## Maintenance log
 
 ### 2026-09-04 — TGC Initial package published and verified in portal

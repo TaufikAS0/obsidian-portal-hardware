@@ -30,6 +30,12 @@
 | 0.6.0 | `manifests/TMM/0.6.0.json` | `TMM-v0.6.0` | approved | RS485 Modbus QC + tutorial |
 | 0.6.1 | (portal record only; manifest tidak ada di library — diimpor manual) | — | approved | latest application |
 | 0.1.0-bootstrap.1 | `manifests/TMM/0.1.0-bootstrap.1-full.json` + `-app-only.json` | `TMM-v0.1.0-bootstrap.1` (draft) | draft | **bootstrap**, `stage=lab`, `firmwareRole=bootstrap`, releaseId `TMM-0.1.0-bootstrap.1-9648a0c` — lihat [[TMM Bootstrap Implementation History]] |
+| 0.6.2 | `manifests/TMM/0.6.2-full.json` + `-app-only.json` | `TMM-v0.6.2` (draft) | draft | **Hardware QC**, `stage=lab`, `firmwareRole=qc`, releaseId `TMM-0.6.2-bdc13c0`, machine-readable qcSummary (D-027) |
+
+**OTA compatibility**: app-only OTA dari v0.6.x hanya kompatibel dengan
+perangkat yang layout partisinya `tmm-ota-4mb` (D-024/D-026). Perangkat dengan
+layout berbeda wajib pemasangan ulang via USB merged BIN. OTA slot limit:
+0x1F0000 (2.031.616 byte) per slot.
 
 Lifecycle di atas dibaca langsung dari database portal (2026-09-01).
 

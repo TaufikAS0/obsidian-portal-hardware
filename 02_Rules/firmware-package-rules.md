@@ -98,6 +98,12 @@ A different hardware revision (e.g. V7) needs its own compatible bootstrap
 package built from that profile — never flash a bootstrap BIN onto a
 mismatched revision.
 
+**OTA partition compatibility**: app-only OTA only works when the target
+device's partition layout matches the source firmware's `partitionScheme`.
+For TMM this is `tmm-ota-4mb` (D-024/D-026). Devices with a different layout
+must be re-flashed via USB merged BIN. OTA slot limit for `tmm-ota-4mb`:
+0x1F0000 (2,031,616 bytes) per slot.
+
 ## Import behavior (portal + firmware library)
 
 - The library manifest schema accepts optional `stage` (`lab`/`production`)
