@@ -3,6 +3,15 @@
 > Produk baru (2026-09-04). Firmware belum tersedia — semua metadata
 > hardware dan repo masih UNCONFIRMED. Berbeda dari HGC, TGC15, dan
 > TGC30 (lihat batasan identitas di bawah).
+>
+> **Kontrak manifest untuk AI firmware TGC** (GLM bawah): saat siap publish,
+> buat dua manifest (`manifest-full.json` + `manifest-app-only.json`) dengan
+> `firmwareRole: "bootstrap"` untuk firmware Initial/Setup, atau
+> `firmwareRole: "testing"` untuk firmware LAB eksplorasi, atau
+> `firmwareRole: "qc"` untuk firmware Hardware QC. Portal tidak menampilkan
+> firmware `application`. Lihat [[02_Rules/firmware-package-rules|Firmware
+> Package Rules]] dan [[04_Guides/Bootstrap Build and Publish SOP|Build and
+> Publish SOP]].
 
 ## Identity
 

@@ -58,27 +58,37 @@ These decisions apply to LAB packages produced through the shared
   this field and shows a clear **LAB** badge on the version, so an operator
   can never mistake a LAB package for production firmware.
 
-## Firmware role and workspace containers (decisions 2026-09-01)
+## Firmware role and workspace containers (updated 2026-09-04)
+
+The portal is a **hardware preparation and testing tool**. It does NOT display
+the product's main application firmware.
 
 Every manifest and portal record carries an optional `firmwareRole`:
 
-| Role | Meaning |
-|---|---|
-| `bootstrap` | First-install / provisioning / recovery base firmware (e.g. the Telemetric Device Bootstrap LAB package) |
-| `application` | The product's main function firmware (default for legacy manifests without the field) |
-| `recovery` | Dedicated recovery image |
+| Role | Container | Theme | Meaning |
+|---|---|---|---|
+| `bootstrap` | Initial / Setup | cyan | First-install / provisioning / recovery base firmware (e.g. Telemetric Device Bootstrap LAB) |
+| `recovery` | Initial / Setup | cyan | Dedicated recovery image (shown alongside bootstrap) |
+| `testing` | Testing / LAB | amber | Exploration and component testing firmware |
+| `qc` | Hardware QC | green | Hardware checking firmware with QC procedure |
+| `application` | *(not displayed)* | — | The product's main function firmware (default for legacy manifests) |
 
 Rules:
 
 - Both artifacts of one `releaseId` must carry the same `firmwareRole`.
+- `stage=lab` does NOT automatically mean the Testing/LAB container — the
+  category is `firmwareRole`, separate from `stage` and `lifecycle`.
+- A QC firmware package does NOT automatically mean a unit passes QC —
+  hardware QC results are recorded separately in the portal QC module.
+- Application firmware records stay in the database but are not shown in
+  any container.
+- Retired and quarantined packages are folded into a collapsed history
+  subsection inside their own category container.
 - The portal groups packages into three containers in the product workspace:
-  1. **`<PRODUCT> Bootstrap & Recovery`** (amber) — bootstrap and recovery
-     packages, with a warning that bootstrap only fits its matching hardware
-     profile;
-  2. **`<PRODUCT> Application Firmware`** (cyan) — the product's main
-     firmware;
-  3. **Firmware History** (collapsed by default) — retired and quarantined
-     packages.
+  1. **Initial / Setup** (cyan) — bootstrap and recovery packages, with a
+     warning that bootstrap only fits its matching hardware profile;
+  2. **Testing / LAB** (amber) — exploration and component testing firmware;
+  3. **Hardware QC** (green) — hardware checking firmware with QC procedure.
 - One release stays one package card with one UPDATE button: USB picks the
   merged/full BIN, OTA/LAN picks the app-only BIN.
 
