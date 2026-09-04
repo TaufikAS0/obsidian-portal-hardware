@@ -15,6 +15,7 @@ Legend: `-` = no firmware repo yet. `UNCONFIRMED` = repo exists but not verified
 | TMC | Telemetric Module Compact | - |
 | TVL | Telemetric Voltage Logger | - |
 | HGC | Heel Ground Checker | - |
+| TGC | Telemetric Ground Checker | - |
 | MIU | Mari Isi Ulang | - |
 | TBNR | Telemetric Bluetooth NFC Reader | - |
 | TIR | Infrared | - |

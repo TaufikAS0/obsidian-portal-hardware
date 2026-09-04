@@ -32,6 +32,7 @@ untuk menemukan registry, rules, products, guides, dan history.
 ## Products
 
 - [[TMM|TMM — Telemetric Module Master]]
+- [[TGC|TGC — Telemetric Ground Checker]]
 - [[TPM|TPM — Telemetric Power Monitor]]
 - [[TVG|TVG — Telemetric Vision Grid]]
 - [[03_Products/_TEMPLATE|Template note produk]]
