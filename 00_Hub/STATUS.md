@@ -1,13 +1,13 @@
 # Vault Status
 
-Updated: 2026-09-01 (TGC added)
+Updated: 2026-09-04 (TGC added)
 
 | Item | State |
 |---|---|
 | Vault created | 2026-08-30 |
 | Central repos registered | 2 of 2 (portal + library) |
 | Product firmware repos registered | 1 confirmed (TMM), 3 UNCONFIRMED (TVG, TPM, TGC) |
-| Products in catalog | 38 codes (TGC ditambahkan 2026-09-01) |
+| Products in catalog | 38 codes (TGC ditambahkan 2026-09-04) |
 | Library manifests published | TMM 0.1.0–0.5.0, 0.6.0, 0.6.1, 0.1.0-bootstrap.1 (dual-artifact), TPM 0.16.24, TVG 1.4.2, 1.4.3 |
 
 ## Open registry gaps (any AI may pick these up)
@@ -19,14 +19,14 @@ Updated: 2026-09-01 (TGC added)
 
 ## Maintenance log
 
-### 2026-09-01 — Produk baru: TGC (Telemetric Ground Checker)
+### 2026-09-04 — Produk baru: TGC (Telemetric Ground Checker)
 
 - TGC (Safety Checker & Logging, Main Products) ditambahkan ke katalog portal
   (seed idempoten `INSERT OR IGNORE`) dan katalog library → 38 produk.
 - Registry: baris baru di `01_Registry/PRODUCTS.md` dan
   `01_Registry/FIRMWARE_REPOS.md` (status `unconfirmed`);
   `03_Products/TGC.md` dibuat dari template; Hub README menautkan TGC.
-- Pencarian GitHub (2026-09-01): tidak ada repo firmware TGC
+- Pencarian GitHub (2026-09-04): tidak ada repo firmware TGC
   (`TaufikAS0/2026-telemetric-ground-checker` = 404; satu-satunya hasil
   "TGC telemetric" adalah proyek drone yang tidak berhubungan) → local path
   dan GitHub repo = UNCONFIRMED.

@@ -1,6 +1,6 @@
 # TGC — Telemetric Ground Checker
 
-> Produk baru (2026-09-01). Firmware belum tersedia — semua metadata
+> Produk baru (2026-09-04). Firmware belum tersedia — semua metadata
 > hardware dan repo masih UNCONFIRMED. Berbeda dari HGC, TGC15, dan
 > TGC30 (lihat batasan identitas di bawah).
 
@@ -14,7 +14,7 @@
 | Type | `Safety Checker & Logging` |
 | Model | `Ground Checker` |
 | Firmware repo (local) | UNCONFIRMED — belum ditemukan repo firmware TGC |
-| Firmware repo (GitHub) | UNCONFIRMED — pencarian GitHub 2026-09-01 tidak menemukan repo firmware TGC (`TaufikAS0/2026-telemetric-ground-checker` = 404; satu-satunya hasil "TGC telemetric" adalah proyek drone yang tidak berhubungan) |
+| Firmware repo (GitHub) | UNCONFIRMED — pencarian GitHub 2026-09-04 tidak menemukan repo firmware TGC (`TaufikAS0/2026-telemetric-ground-checker` = 404; satu-satunya hasil "TGC telemetric" adalah proyek drone yang tidak berhubungan) |
 | Library manifests | `telemetric-firmware-library/manifests/TGC/` (belum ada — jangan buat tanpa BIN nyata) |
 | Portal | https://192.168.1.122:8443/products/TGC |
 
