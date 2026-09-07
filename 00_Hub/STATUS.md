@@ -1,6 +1,6 @@
 # Vault Status
 
-Updated: 2026-09-04 (TGC added, TMM 0.6.2 QC published)
+Updated: 2026-09-07 (TGC classic ESP32 source package verified)
 
 | Item | State |
 |---|---|
@@ -18,6 +18,22 @@ Updated: 2026-09-04 (TGC added, TMM 0.6.2 QC published)
 4. Register product firmware repos here as they are created for the remaining catalog codes.
 
 ## Maintenance log
+
+### 2026-09-07 — TGC ESP32 classic source package verified
+
+- Repo `2026-telemetric-ground-checker` verified at `main` HEAD `95cf011`;
+  firmware source commit `cdd1945` is an ancestor of that HEAD.
+- Latest source package is `TGC-0.2.0-initial.1-cdd1945`, profile
+  `TGC_LAB_ESP32_4M`, ESP32 classic 4MB/dio, `firmwareRole=bootstrap`,
+  `stage=lab`.
+- Independent re-hash matched both manifests: app-only 998,704 bytes
+  (`6fd37920…a737d`) and merged 4,194,304 bytes (`1073857f…5594`). Repo tests
+  passed 44/44.
+- No matching manifest was found in the central firmware library and no matching
+  portal data was found. Publication/import remains assigned to the portal/library
+  worker; the already-published ESP32-S3 16MB package remains unchanged.
+- Classic ESP32 physical detection, flash, provisioning, and OTA remain
+  UNCONFIRMED. Compile success is not physical hardware proof.
 
 ### 2026-09-04 - TMM v0.6.2 Hardware QC published
 

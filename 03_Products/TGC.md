@@ -1,8 +1,10 @@
 # TGC — Telemetric Ground Checker
 
-> Produk baru (2026-09-04). Package bootstrap Initial pertama sudah di-publish
-> dan tampil di portal. Firmware fisik belum di-flash — pengujian perangkat
-> masih pending. Berbeda dari HGC, TGC15, dan TGC30.
+> Produk baru (2026-09-04). Package bootstrap Initial ESP32-S3 sudah di-publish
+> dan tampil di portal. Package ESP32 klasik 4MB yang lebih baru sudah dibangun
+> di repo sumber, tetapi belum dipublish ke library atau diimpor portal.
+> Firmware fisik belum di-flash — pengujian perangkat masih pending. Berbeda
+> dari HGC, TGC15, dan TGC30.
 >
 > **Kontrak manifest untuk AI firmware TGC** (GLM bawah): gunakan
 > `firmwareRole` sesuai fungsi — `"bootstrap"` untuk Initial/Setup,
@@ -29,35 +31,40 @@
 
 | Version | Manifest | Release tag | Lifecycle in portal | Notes |
 |---|---|---|---|---|
+| 0.2.0-initial.1 | Build output repo sumber: `manifest-full.json` + `manifest-app-only.json` | `TGC-v0.2.0-initial.1` (belum dipublish) | belum diimpor | **bootstrap**, `stage=lab`, `firmwareRole=bootstrap`, releaseId `TGC-0.2.0-initial.1-cdd1945`; target ESP32 klasik 4MB, verifikasi fisik pending |
 | 0.1.0-initial.1 | `manifests/TGC/0.1.0-initial.1-full.json` + `-app-only.json` | `TGC-v0.1.0-initial.1` (draft) | draft | **bootstrap**, `stage=lab`, `firmwareRole=bootstrap`, releaseId `TGC-0.1.0-initial.1-24113fe` |
 
 Operator↔AI notes: `telemetric-firmware-library/notes/TGC/0.1.0-initial.1/`
 
-## Hardware
+## Hardware profiles
 
-| Field | Value | Evidence |
-|---|---|---|
-| Chip family | ESP32-S3 | board-proven (read-only chip detection) |
-| Flash size | 16MB | profile `TGC_LAB_ESP32S3_16M` |
-| Flash mode | qio | profile |
-| Partition scheme | `tgc-ota-16mb` | profile |
-| Ethernet | UNCONFIRMED — disabled | manifest `disabledFeatures` |
-| Physical setup control | UNCONFIRMED — disabled | manifest `disabledFeatures` |
-| COM port | UNCONFIRMED — belum diverifikasi | |
-| Flash method | Web Serial via portal (merged BIN) + OTA/LAN (app BIN) | |
+| Profile | Chip / flash | Partition | Evidence | Status |
+|---|---|---|---|---|
+| `TGC_LAB_ESP32S3_16M` | ESP32-S3 / 16MB / qio | `tgc-ota-16mb` | read-only chip detection pada board | package 0.1.0 dipublish; flash fisik pending |
+| `TGC_LAB_ESP32_4M` | ESP32 klasik / 4MB / dio | custom OTA, slot 1,966,080 byte | compile target + manifest; **bukan** deteksi board fisik | package 0.2.0 sudah dibangun; library/portal/flash pending |
 
-Sumber bukti: `profiles/TGC_LAB_ESP32S3_16M/profile.json` di repo firmware TGC.
+Kedua profile memakai merged BIN untuk USB dan app-only BIN untuk OTA/LAN.
+Ethernet dan physical setup control tetap UNCONFIRMED/disabled sampai ada bukti
+perangkat. Sumber bukti ada di `profiles/` dan `docs/HANDOFF-ESP32-CLASSIC.md`
+di repo firmware TGC.
 
 ## Lessons for the next AI
 
 - Bootstrap TGC menggunakan framework yang sama dengan TMM
   ([[TMM Bootstrap Implementation History]]) tapi dengan profile dan
   partition sendiri (`TGC_LAB_ESP32S3_16M`, `tgc-ota-16mb`).
-- `sourceCommit` build (`24113fe`) adalah ancestor dari HEAD (`ce72c11`);
-  perbedaan hanya docs, tidak memengaruhi build.
+- HEAD terbaru repo sumber adalah `95cf011` (handoff documentation). Firmware
+  klasik terbaru dibangun dari commit `cdd1945`, yang terbukti ancestor HEAD.
+- Package klasik `0.2.0-initial.1` berisi app-only 998,704 byte (SHA-256
+  `6fd37920004bd9e4e2359917f178dfd838b443a0839403e5b54aaec9972a737d`)
+  dan merged 4,194,304 byte (SHA-256
+  `1073857fdb867b872c5ed936c6da8afa191f725e9ce6b7b34d8bb1682ebb5594`).
+  Kedua hash diverifikasi ulang 2026-09-07; test repo 44/44 lulus.
 - COM6 masih UNCONFIRMED — jangan flash tanpa verifikasi port dan profil.
-- ESP32 klasik (non-S3) belum diuji — portal menampilkan ESP32-S3 / 16MB
-  secara eksplisit di kartu bootstrap.
+- ESP32 klasik belum diuji fisik. Label portal harus menyebut ESP32 / 4MB dan
+  status build target/pending, bukan menyebutnya board-proven.
+- Jangan mengganti atau menggabungkan package ESP32-S3 16MB dengan package
+  ESP32 klasik 4MB; keduanya profile hardware berbeda.
 
 ## Evidence pointers
 
@@ -66,3 +73,5 @@ Sumber bukti: `profiles/TGC_LAB_ESP32S3_16M/profile.json` di repo firmware TGC.
   [[01_Registry/FIRMWARE_REPOS|FIRMWARE_REPOS]]
 - Portal importer audit: `firmware_library_auto_imported` × 2 untuk
   `TGC-0.1.0-initial.1-24113fe`
+- Source package pending: `TGC-0.2.0-initial.1-cdd1945`; belum ditemukan di
+  manifest library maupun data portal pada pemeriksaan 2026-09-07.
