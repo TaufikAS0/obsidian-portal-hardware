@@ -19,6 +19,17 @@ Updated: 2026-09-07 (TGC classic ESP32 source package verified)
 
 ## Maintenance log
 
+### 2026-09-07 - TGC Research v0.9.0-research.1 dual-target published
+
+- Two TGC Research packages (firmwareRole=testing, stage=lab) published as separate draft releases:
+  - ESP32 klasik 4MB: releaseId `TGC-0.9.0-research.1-ee199aa-esp32`, tag `TGC-v0.9.0-research.1-esp32`
+  - ESP32-S3 16MB: releaseId `TGC-0.9.0-research.1-ee199aa-esp32s3`, tag `TGC-v0.9.0-research.1-esp32s3`
+- Portal imported 4 records (2 per target); Testing/LAB container shows 2 cards with correct chip/flash/profile.
+- Publisher publish-package fixed to use per-target releaseTag from manifest.
+- Build source commit ee199aa; HEAD 65fb0f5 (docs-only diff).
+- Physical flash/provision/OTA still pending. Research stage: ground resistance UNCALIBRATED.
+## Maintenance log
+
 ### 2026-09-07 — TGC ESP32 classic source package verified
 
 - Repo `2026-telemetric-ground-checker` verified at `main` HEAD `95cf011`;
