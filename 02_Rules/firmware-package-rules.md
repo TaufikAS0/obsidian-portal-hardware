@@ -115,3 +115,22 @@ must be re-flashed via USB merged BIN. OTA slot limit for `tmm-ota-4mb`:
   product/version/build (they differ by image type), and the portal groups
   them into one version card with a single UPDATE button: USB picks the
   merged/full record, OTA/LAN picks the app-only record.
+
+## Product notes are product-scoped (decision 2026-09-08)
+
+One dual-artifact release has TWO firmware records in the portal (one per
+image type). Firmware notes are therefore displayed in a product-wide feed,
+never per selected artifact:
+
+- The product workspace always shows one **Catatan Produk / Permintaan &
+  Perbaikan** (Product Notes / Requests & Fixes) container. It lists every
+  non-deleted note of the productCode — all versions, USB and OTA alike —
+  newest on top, with number, author, time, version, hardware profile, and
+  `releaseId`.
+- The per-package **Catatan Versi** panel stays for writing notes while a
+  package is selected; a new note may bind to that package's firmware record
+  but always appears in the product feed.
+- Do not add categories, statuses, or approval workflows to notes; the form
+  stays one textarea.
+- Admin/Supervisor delete, Firmware Library sync, and the portal audit are
+  unchanged. Deleting a note removes it from the product feed too.
