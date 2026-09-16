@@ -1,14 +1,14 @@
 # Vault Status
 
-Updated: 2026-09-07 (TGC classic ESP32 source package verified)
+Updated: 2026-09-16 (TTB Telemetric Test Bench v0.8.0-testing.1 dual-artifact draft published)
 
 | Item | State |
 |---|---|
 | Vault created | 2026-08-30 |
 | Central repos registered | 2 of 2 (portal + library) |
-| Product firmware repos registered | 2 confirmed (TMM, TGC), 2 UNCONFIRMED (TVG, TPM) |
-| Products in catalog | 38 codes |
-| Library manifests published | TMM 0.1.0–0.5.0, 0.6.0, 0.6.2 (dual-artifact QC), 0.6.1 (portal only), 0.1.0-bootstrap.1 (dual-artifact bootstrap), TGC 0.1.0-initial.1 (dual-artifact bootstrap), TPM 0.16.24, TVG 1.4.2, 1.4.3 |
+| Product firmware repos registered | 3 confirmed (TMM, TGC, TTB), 2 UNCONFIRMED (TVG, TPM) |
+| Products in catalog | 39 codes |
+| Library manifests published | TMM 0.1.0–0.5.0, 0.6.0, 0.6.2 (dual-artifact QC), 0.6.1 (portal only), 0.1.0-bootstrap.1 (dual-artifact bootstrap), TGC 0.1.0-initial.1 (dual-artifact bootstrap), TPM 0.16.24, TVG 1.4.2, 1.4.3, TTB 0.8.0-testing.1 (dual-artifact testing/LAB) |
 
 ## Open registry gaps (any AI may pick these up)
 
@@ -18,6 +18,15 @@ Updated: 2026-09-07 (TGC classic ESP32 source package verified)
 4. Register product firmware repos here as they are created for the remaining catalog codes.
 
 ## Maintenance log
+
+### 2026-09-16 — TTB v0.8.0-testing.1 dual-artifact draft published
+
+- Package `TTB-0.8.0-testing.1-bac4da5` (firmwareRole=testing, stage=lab, ESP32 classic 4MB/qio/min_spiffs, `wifiCapable`) published via `publish-package` to draft release `TTB-v0.8.0-testing.1-esp32` (4 assets: 2 BIN + 2 manifest; publisher download checksum verified; independent re-download re-verified size + SHA-256).
+- Source repo `2026-05-esp-logger` pushed normally: local HEAD = origin/develop = ls-remote = `bac4da58c26dc23fc1342c4291e7d5c21d750ae7`.
+- Portal auto-synced exactly 2 records (full offset 0 + app-only offset 0x10000), no duplicates by releaseId+imageType; Testing/LAB container shows 1 card; USB→merged/full, OTA→app-only.
+- Evidence level `built` (compile/build + artifact validation only): no bench test, no QC pass, no flash, no hardware/peripheral verification. Hardware revision/profile and all physical verification remain UNCONFIRMED/PENDING; portal profile stored as `UNCONFIRMED`.
+- Registry: `FIRMWARE_REPOS.md` TTB row added as `confirmed`; `PRODUCTS.md` TTB row added (Support Tools, 39 codes); `03_Products/TTB.md` created from template.
+- Library manifests add the fields the source build tools did not emit (`schemaVersion`, `erasePolicy: prompt`, `wifiCapable`, `releaseNotes`, sourceCreatedAt from build metadata); no BIN and no firmware source was rebuilt or modified.
 
 ### 2026-09-07 - TGC Research v0.9.0-research.1 dual-target published
 

@@ -19,6 +19,7 @@ Rules for maintaining this table: see `../02_Rules/registry-rules.md`.
 | TVG | Telemetric Vision Grid | UNCONFIRMED | UNCONFIRMED (no firmware source repo found on GitHub; only `pcb-vision-grid` and `3d-telemetric-vision-grid` exist) | v1.4.3 (manifests 1.4.2, 1.4.3; pilot flash done on ESP32-S3) | unconfirmed |
 | TGC | Telemetric Ground Checker | `D:\Home Work\Software Github\2026-telemetric-ground-checker` | https://github.com/TaufikAS0/2026-telemetric-ground-checker | Source package 0.2.0-initial.1 (ESP32 klasik 4MB build target; library/portal pending); published 0.1.0-initial.1 (ESP32-S3 16MB bootstrap, lab) | confirmed |
 | TPM | Telemetric Power Monitor | UNCONFIRMED (portal README references its INA3221 source repo) | UNCONFIRMED (candidate: https://github.com/TaufikAS0/2026-esp32s3-solar-power-monitor-ina3221 — repo exists and matches INA3221 hardware, but no manifest/product-code verification found) | v0.16.24 | unconfirmed |
+| TTB | Telemetric Test Bench | `D:\Home Work\Firmware Github\2026-05-esp-logger` | https://github.com/TaufikAS0/2026-05-esp-logger | 0.8.0-testing.1 (draft, Testing/LAB; source commit bac4da5; physical verification PENDING) | confirmed |
 
 ## How to promote an `unconfirmed` row to `confirmed`
 

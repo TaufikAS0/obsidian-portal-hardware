@@ -1,6 +1,6 @@
 # Product Catalog Registry
 
-All 37 product codes, copied from
+All 39 product codes, copied from
 `telemetric-firmware-library/catalog/products.json` (verify there before
 editing). The "Firmware repo" column must match a row in `FIRMWARE_REPOS.md`.
 
@@ -62,6 +62,7 @@ Legend: `-` = no firmware repo yet. `UNCONFIRMED` = repo exists but not verified
 |---|---|---|
 | TDL | Downloader | - |
 | TPM | Telemetric Power Monitor | UNCONFIRMED |
+| TTB | Telemetric Test Bench | `2026-05-esp-logger` |
 | TMPC | Modular PCB Concept | - |
 
 ## Rules
