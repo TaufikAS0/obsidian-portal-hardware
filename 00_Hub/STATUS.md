@@ -1,5 +1,12 @@
 # Vault Status
 
+## 2026-10-12 - Compact LAB distribution
+
+Owner-approved public LAB credential policy added in 02_Rules/lab-default-credentials.md.
+TMC QC repository registered from verified Git remote and feature/qc-operator-ota.
+App-only distribution preserves legacy NVS/storage; hardware test remains pending.
+Unrelated local graph/canvas and firmware-package-rules edits were preserved.
+
 Updated: 2026-09-16 (TTB Telemetric Test Bench v0.8.0-testing.1 dual-artifact draft published)
 
 | Item | State |

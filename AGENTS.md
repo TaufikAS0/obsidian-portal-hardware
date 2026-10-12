@@ -59,7 +59,9 @@ location/registry layer on top.
 ## Safety (inherited from the canonical rule)
 
 - BIN files belong in GitHub Release assets, never in Git history.
-- Never commit credentials, keys, passwords, databases, or production logs.
+- Never commit private credentials, keys, passwords, databases, or production logs.
+  Owner-approved public LAB defaults and legacy app-only distribution follow
+  `02_Rules/lab-default-credentials.md` (2026-10-12 exception).
 - Publishing firmware is not approval. The local portal alone owns flash
   permission, lifecycle, and QC.
 - Do not treat a GitHub Release as permission to flash.
