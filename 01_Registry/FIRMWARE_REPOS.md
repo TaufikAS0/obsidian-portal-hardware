@@ -15,6 +15,7 @@ Rules for maintaining this table: see `../02_Rules/registry-rules.md`.
 
 | Code | Product | Local path | GitHub repo | Latest known release | Status |
 |---|---|---|---|---|---|
+| AOM | Automatic Oxygen Manifold Hardware QC | `D:\Home Work\Firmware Github\esp32-hardware-test-manifold` | https://github.com/TaufikAS0/esp32-hardware-test-manifold | 1.6.4 LAB QC, AOM_V1_R0 owner-confirmed; build target ESP32/4MB/DIO, physical MCU/flash UNCONFIRMED | confirmed |
 | TMC | Telemetric Module Compact QC | `D:\Home Work\Firmware Github\compact-qc-tester-v2-r1` | https://github.com/TaufikAS0/compact-qc-tester-v2-r1 | 0.5.1 LAB QC; standard full+app, optional full erase; physical verification PENDING | confirmed |
 | TMM | Telemetric Module Master | `D:\Home Work\Software Github\2026-telemetric-module-master` | https://github.com/TaufikAS0/2026-telemetric-module-master | v0.5.0 (manifests 0.1.0–0.5.0) | confirmed |
 | TVG | Telemetric Vision Grid | UNCONFIRMED | UNCONFIRMED (no firmware source repo found on GitHub; only `pcb-vision-grid` and `3d-telemetric-vision-grid` exist) | v1.4.3 (manifests 1.4.2, 1.4.3; pilot flash done on ESP32-S3) | unconfirmed |

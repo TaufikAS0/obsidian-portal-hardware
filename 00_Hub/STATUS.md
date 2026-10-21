@@ -1,5 +1,21 @@
 # Vault Status
 
+## 2026-10-21 - AOM V1 R0 QC integration
+
+Registered `D:\Home Work\Firmware Github\esp32-hardware-test-manifold` from its
+verified Git remote. Owner selected catalog AOM (not ANM/AGM) and confirmed PCB
+V1 R0. Baseline c02c4f2/1.6.3; integration source 912efc6/1.6.4 on
+feature/portal-manifold-qc adds ordered primary/secondary non-blocking Wi-Fi and
+read-only AOM identity. Package is draft/built, role qc, stage lab; target
+ESP32/4MB/DIO is a build choice, fitted MCU/flash remains UNCONFIRMED. No flash,
+physical network/output/sensor/OTA test or QC PASS. See [[03_Products/AOM]].
+Unrelated graph/canvas/firmware-package-rules changes are preserved.
+Build passed, actual partitions/merged-app/size/hash verified. Draft release
+`AOM-1.6.4-912efc6` contains four assets; publisher re-download verification
+passed. Library gate passed twice (31 tests; 54 manifests). No physical tests.
+Portal import verified exactly two records under one releaseId, Hardware QC/LAB,
+both stored-file hashes/sizes correct, /products/AOM HTTPS 200.
+
 ## 2026-10-12 - Compact LAB distribution
 
 Owner-approved public LAB credential policy added in 02_Rules/lab-default-credentials.md.

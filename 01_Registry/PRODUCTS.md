@@ -32,7 +32,7 @@ Legend: `-` = no firmware repo yet. `UNCONFIRMED` = repo exists but not verified
 | TGC15 | Ground Checker 15 Channel | - |
 | TGC30 | Ground Checker 30 Channel | - |
 | LAC | A.I. Cleshi Air Cleaner | - |
-| AOM | Automatic Oxygen Manifold | - |
+| AOM | Automatic Oxygen Manifold | https://github.com/TaufikAS0/esp32-hardware-test-manifold |
 | ANM | Automatic Nitrogen Manifold | - |
 | VAS | Vacuum Air Simplex | - |
 | VAD | Vacuum Air Duplex | - |
