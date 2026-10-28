@@ -3,6 +3,7 @@
 | Rule file | Purpose |
 |---|---|
 | [[02_Rules/ai-entry-protocol|AI Entry Protocol]] | README-first rule and mandatory reading route for every AI |
+| [[02_Rules/Google Drive Manager|Google Drive Manager Jaya]] | Folder, salinan, owner, dan catatan pekerjaan Drive Jaya |
 | `registry-rules.md` | Exact formats and lifecycle for every registry table |
 | `ai-handoff.md` | How AIs hand off information to each other |
 

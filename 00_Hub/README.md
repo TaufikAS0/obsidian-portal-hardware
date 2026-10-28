@@ -20,6 +20,7 @@ untuk menemukan registry, rules, products, guides, dan history.
 
 ## Rules — aturan wajib
 
+- [[02_Rules/Google Drive Manager|Google Drive Manager Jaya]] — bantuan membuat folder, menyalin file, dan merapikan Drive
 - [[02_Rules/ai-entry-protocol|AI Entry Protocol]] — README wajib dibaca
   pertama dan routing bacaan berdasarkan jenis pekerjaan
 - [[02_Rules/registry-rules|Registry Rules]] — cara merawat registry
