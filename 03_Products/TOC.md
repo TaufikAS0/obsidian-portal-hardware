@@ -8,6 +8,7 @@
 | Catalog adoption | Pending library PR #1, feature/catalog-toc, commit d47b605; default catalog not yet changed |
 | Product group proposal | Main Products, pending catalog review |
 | PCB role | Motherboard / modular mainboard |
+| Module form | Daughterboard dipasang ke slot motherboard; owner-confirmed 2026-10-29 |
 | PCB source | https://github.com/TaufikAS0/pcb-toc-mainboard (private) |
 | PCB local | `D:\JIN Work\Document\0. JIN Project Github PCB\2026 TOC Mainboard` |
 | Firmware repository | - (not created) |
@@ -27,5 +28,5 @@ Sumber keputusan interface dan pin nanti berada di repo PCB (04_Dokumen/Interfac
 
 - Registry PCB: [[01_Registry/PCB_REPOS|PCB_REPOS]].
 - GitHub operations vault: [obsidian-github-manager](https://github.com/TaufikAS0/obsidian-github-manager) private; bukan portal flashing/QC.
-- Belum menentukan daughterboard pada slot versus module node berkabel; owner menjawab sebelum konektor/pin disiapkan.
+- Owner memilih daughterboard dipasang ke slot motherboard pada 2026-10-29. Jumlah slot, bus, connector, power dan hot-plug masih UNCONFIRMED; diputuskan sebelum schematic/pin.
 - Jangan mendaftarkan baris firmware fiktif di FIRMWARE_REPOS. Saat source firmware benar-benar dibuat, update registry dalam sesi yang sama.
