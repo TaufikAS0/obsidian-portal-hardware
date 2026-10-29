@@ -1,5 +1,13 @@
 # Vault Status
 
+## 2026-10-29 — TOC concept and GitHub Manager registration (PR pending)
+
+- Owner confirmed TOC = Telemetric Omni Controller; modular motherboard. Private source `TaufikAS0/pcb-toc-mainboard` and operations vault `TaufikAS0/obsidian-github-manager` created, cloned and remotes verified. Both use feature PRs to develop; source/MCU/pin/compatibility UNCONFIRMED. No firmware or hardware release created.
+- `01_Registry/PCB_REPOS.md` added as incremental PCB registry, `03_Products/TOC.md` concept note, manager route in TOOL_REPOS and hub. Catalog code proposal: library PR #1, commit d47b605; default catalog still 39; proposed catalog 40 validated with existing tests 31/31 and library validation 54 manifests. No historical artifacts modified.
+- GitHub Manager delegated scope: reviewed+successful-checks exact head merge to develop only; main/release/access/rename/delete require owner. This does not supersede target repo/hardware policies. Registry files here are not approval to flash.
+- Private source paths: `D:\JIN Work\Document\0. JIN Project Github PCB\2026 TOC Mainboard` and `D:\JIN Work\Document\0. JIN Project Software Github\obsidian-github-manager`. Current portal/library checkout for registration is scratch, not a relocated canonical live installation.
+- Repo metadata and local remotes verified; branch-default adoption of these note changes remains pending this PR. No main/master merges performed.
+
 ## 2026-10-21 - AOM V1 R0 QC integration
 
 Registered `D:\Home Work\Firmware Github\esp32-hardware-test-manifold` from its

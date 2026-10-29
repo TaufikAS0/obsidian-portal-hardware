@@ -67,6 +67,10 @@ Legend: `-` = no firmware repo yet. `UNCONFIRMED` = repo exists but not verified
 
 ## Rules
 
+### Pending catalog adoption — not part of the default code count
+
+TOC = Telemetric Omni Controller, owner-confirmed 2026-10-29. [Library catalog PR #1](https://github.com/TaufikAS0/telemetric-firmware-library/pull/1), feature/catalog-toc at d47b605, proposes one Main Product (39 → 40). Until catalog adoption, keep the existing mirrored tables unchanged; [[03_Products/TOC|TOC concept]] and [[01_Registry/PCB_REPOS|PCB registry]] record the real new hardware repository. Firmware repo does not exist. After library integration is accepted, refresh the mirror from that exact catalog commit, without treating catalog presence as firmware/hardware acceptance.
+
 1. When a firmware repo is created for a code, replace `-` with the repo name
    and add the full row to `FIRMWARE_REPOS.md` in the same session.
 2. A catalog entry does not imply production firmware exists.

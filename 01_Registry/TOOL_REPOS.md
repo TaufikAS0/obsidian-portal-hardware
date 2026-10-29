@@ -14,6 +14,8 @@ firmware sources; product firmware belongs in `FIRMWARE_REPOS.md`.
 
 ## Coordination vault
 
+Private operations vault: `obsidian-github-manager`, local `D:\JIN Work\Document\0. JIN Project Software Github\obsidian-github-manager`, https://github.com/TaufikAS0/obsidian-github-manager. Location confirmed via local git remote and live GitHub API 2026-10-29. Owns Git task routing, PR inspection and bounded develop merge procedure, not firmware governance, hardware specification, or portal approval.
+
 | Name | Role | Local path | GitHub repo |
 |---|---|---|---|
 | ai-collaboration-vault | General AI collaboration vault; holds the canonical firmware ecosystem rule | `D:\Home Work\Software Github\ai-collaboration-vault` | https://github.com/TaufikAS0/ai-collaboration-vault |

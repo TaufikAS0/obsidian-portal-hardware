@@ -11,11 +11,13 @@ untuk menemukan registry, rules, products, guides, dan history.
 
 ## Registry — lokasi dan nama GitHub
 
+- [[01_Registry/PCB_REPOS|PCB_REPOS]] — registry PCB incremental; TOC modular mainboard concept (private source)
+- GitHub operations: [obsidian-github-manager](https://github.com/TaufikAS0/obsidian-github-manager) private; selective read / review-check gated develop merges
 - [[01_Registry/CENTRAL_REPOS|CENTRAL_REPOS]] — portal + library
 - [[01_Registry/FIRMWARE_REPOS|FIRMWARE_REPOS]] — repo firmware per produk
 - [[01_Registry/TOOL_REPOS|TOOL_REPOS]] — tools pendukung (termasuk device
   bootstrap framework)
-- [[01_Registry/PRODUCTS|PRODUCTS]] — 37 kode produk
+- [[01_Registry/PRODUCTS|PRODUCTS]] — 39 kode pada katalog default saat 2026-10-29; TOC proposed via library PR #1 (40 pada branch proposal)
 - [[01_Registry/DEVICES|DEVICES]] — mesin dan lokasi runtime
 
 ## Rules — aturan wajib
@@ -32,6 +34,7 @@ untuk menemukan registry, rules, products, guides, dan history.
 
 ## Products
 
+- [[03_Products/TOC|TOC — Telemetric Omni Controller]] — konsep mainboard modular, catalog adoption pending
 - [[TMM|TMM — Telemetric Module Master]]
 - [[TGC|TGC — Telemetric Ground Checker]]
 - [[TPM|TPM — Telemetric Power Monitor]]
