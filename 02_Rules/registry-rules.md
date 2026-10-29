@@ -35,6 +35,9 @@ Keep the exact column order of each table so scripts and AIs can parse it:
 - `FIRMWARE_REPOS.md`: `| Code | Product | Local path | GitHub repo | Latest known release | Status |`
 - `TOOL_REPOS.md`: `| Name | Role | Local path | GitHub repo | Status |`
 - `PRODUCTS.md`: `| Code | Name | Firmware repo |`
+- `PCB_REPOS.md` (incremental hardware registry): `| Code | Board role | Local path | GitHub repo | Hardware revision | Status |`
+
+Owner-confirmed product proposals may have a concept note and actual PCB location row before catalog adoption, but must be labeled `catalog adoption pending` with the exact library PR/commit. Do not add them to the mirrored PRODUCTS tables/count or firmware registry as if already accepted. Source code authority stays library catalog; after adoption refresh mirror from the adopted commit.
 
 ## 6. Single-source rule
 
